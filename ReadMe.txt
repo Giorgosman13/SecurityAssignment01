@@ -23,7 +23,7 @@ If its wrong then we get an "Invalid Message" response
 To check what happens if someone tries to connect with a rogue client which has different certificates than the server we do:
 ./rclient 127.0.0.1 8082
 
-Which instantly returns an error code and the response "peer did not return a certificate or returned an invalid one”
+Which instantly returns an error code to both the server and the client and the message "peer did not return a certificate or returned an invalid one”
 
 The commands we run to get the certificates for each are:
 

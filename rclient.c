@@ -139,7 +139,7 @@ int main(int argc, char *argv[])
      */
     int temp = SSL_connect(ssl);
     if (temp <= 0){
-        printf("peer did not return a certificate or returned an invalid one\n");
+        printf("You did not return a certificate or returned an invalid one\n");
         ERR_print_errors_fp(stderr);
         SSL_free(ssl);
         close(server);

@@ -139,6 +139,7 @@ int main(int argc, char *argv[])
      */
     int temp = SSL_connect(ssl);
     if (temp == 0){
+        printf("You did not return a certificate or returned an invalid one\n");
         ERR_print_errors_fp(stderr);
         abort();
     }

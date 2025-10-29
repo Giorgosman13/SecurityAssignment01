@@ -108,6 +108,7 @@ void Servlet(SSL* ssl) {
     char buf[1024] = {0};
 
     if (SSL_accept(ssl) == FAIL) {
+        printf("peer did not return a certificate or returned an invalid one\n");
         ERR_print_errors_fp(stderr);
         return;
     }
